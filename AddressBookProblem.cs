@@ -168,7 +168,7 @@ namespace AddressBook
         public static bool CheckDuplicate(List<Contact> contacts, string firstName)
         {
 
-            
+
             if (contacts.Count > 0)
             {
 
@@ -182,8 +182,48 @@ namespace AddressBook
             return false;
 
         }
-
-       
+        // sorting the contact list by city name in alphabetical order
+        public void SortingListcity()
+        {
+            List<Contact> SortedList = new List<Contact>();
+            SortedList = personDetails.OrderBy(s => s.city).ToList();
+            foreach (var data in SortedList)
+            {
+                if (personDetails.Contains(data))
+                {
+                    Console.WriteLine("*************Contact Details****************");
+                    Console.WriteLine($"Name of person           : {data.firstName} {data.lastName}");
+                    Console.WriteLine($"Address of person is     : {data.address}");
+                    Console.WriteLine($"State                    : {data.state}");
+                    Console.WriteLine($"City                     : {data.city}");
+                    Console.WriteLine($"Zip                      : {data.zip}");
+                    Console.WriteLine($"Email of person          : {data.email}");
+                    Console.WriteLine($"Phone Number of person   : {data.phoneNumber}");
+                    Console.WriteLine();
+                }
+            }
+        }
+        // sorting the contact list by state name in alphabetical order
+        public void SortingListState()
+        {
+            List<Contact> SortedList = new List<Contact>();
+            SortedList = personDetails.OrderBy(s => s.state).ToList();
+            foreach (var data in SortedList)
+            {
+                if (personDetails.Contains(data))
+                {
+                    Console.WriteLine("*************Contact Details****************");
+                    Console.WriteLine($"Name of person           : {data.firstName} {data.lastName}");
+                    Console.WriteLine($"Address of person is     : {data.address}");
+                    Console.WriteLine($"State                    : {data.state}");
+                    Console.WriteLine($"City                     : {data.city}");
+                    Console.WriteLine($"Zip                      : {data.zip}");
+                    Console.WriteLine($"Email of person          : {data.email}");
+                    Console.WriteLine($"Phone Number of person   : {data.phoneNumber}");
+                    Console.WriteLine();
+                }
+            }
+        }
     }
 }
 

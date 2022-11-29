@@ -8,7 +8,7 @@ Console.WriteLine("Welcome To Address Book Program");
 AddressBookProblem person1 = new AddressBookProblem();
 while (true)
 {
-    Console.WriteLine("Choose one operation to perform:\n 1-Add a Contact \n 2-View the AddressBook \n 3-Edit the Address Book \n 4-Delete the person \n 5-Multi Person to AddressBook \n 6-Exit from the Addressbook\n 7CheckDuplicate");
+    Console.WriteLine("Choose one operation to perform:\n 1-Add a Contact \n 2-View the AddressBook \n 3-Edit the Address Book \n 4-Delete the person \n 5-Multi Person to AddressBook \n 6-SortingListcity \n 7-SortingListState  \n 8-Exit from the Addressbook");
     int option = Convert.ToInt32(Console.ReadLine());
     switch (option)
     {
@@ -33,11 +33,15 @@ while (true)
             Console.WriteLine("Enter any key to exit");
             break;
         case 6:
-            person1.CheckDuplicate();
-            Console.WriteLine("Enter any key to exit");
+            person1.SortingListcity();
             break;
         case 7:
+            person1.SortingListState();
+            break;
+        
+        case 8:
             return;
+                            
         default:
             Console.WriteLine("Please enter a valid input");
             break;
